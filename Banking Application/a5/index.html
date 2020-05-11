@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+    - This is my original work and it shall not be used anywhere else without my written permission.
+    - This is a webpage application for a banking system which will have secured login to the system. This system 
+    - talks with the database based on selection made by the bank employee. for trial, you may user user id as abcd 
+    - and password as 1234. Else click on register new user . Ensure to keep a strong password else alert messages 
+    - will be shown. Once successful, it would show that new user is created. With these new user id and password login
+    - to the system. Once login is done, a menu option will be displayed to the bank employee to do various functions namely-
+    - 1. Add/Create a new customer account 2. Add/Remove balance from account 3.Update customer credentials 4. Display all
+    - accounts in from the database 5. logout.
+    - 
+    - Javascript and Ajax are used to Add or create a new customer account and not for registering a new bank employee.
+    - Register of bank employee and other options from the menu except create a new customer account uses a flow of parameters
+    - via post method between PHP files and checking the same with database.
+    - Jquery is used to animate the first index.html page and also for alerts in other pages.
+    -->
+
+<head>
+    <title>Customer Service Login</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="gamecss.css"
+    rel="stylesheet"
+    type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    // this is a jquery method to animate various functions in this page
+    $(document).ready(function () {
+        
+        // clicking the photo would slide the same up
+            $("#banner").click(function(){$(this).slideUp()});
+            // if we hover on the page colour of background, buttons will change 
+            $("#main").mouseover(function(){
+                        $(this).css("background-color", "blue");
+                        });
+            $("#themebutton").mouseover(function(){
+                            $(this).css("background-color", "red");
+                        });
+            $("#submitbutton").mouseover(function(){
+                $(this).css("background-color", "Red");
+            });
+                $("#registerbutton").mouseover(function(){
+                $(this).css("background-color", "Red");
+            });
+            // clicking the theme change button will change appearance of the whole page.
+            $("#themebutton").click(function(){
+                            $("#main").css({                           
+                                backgroundColor:"black",                 
+                                borderstyle: "solid",
+                                bordercolor:"white",
+                                color:"white",
+                                
+                            });
+                        }); 
+        });
+    </script>
+ 
+
+
+    
+</head>
+
+<body>
+    
+    
+    <div id="main" class="main">
+        <h1 id='message' class='heading'>Customer Service Login!!</h1>
+        <!--Form to input login id and password which will input the parameters to menu.php page via post method-->
+        <form id="mainform" method='post' action='menu.php'>
+            User id:<input type="text" id="userid" name="userid" size=20px placeholder='user-id'  autofocus><br> 
+            Password: <input type="password" id="password" name="password" placeholder='password' ><br>
+                      <input type="submit" id="submitbutton"> 
+        </form>
+        <!--this form once clicked would go to addnew.php page which will have a form so as to register a new user-->
+        <form id="registerform" method='post' action='addnew.php'>
+                <p><i>In case of new user , please click on Register button</i></p>
+                <input type="submit" id="registerbutton" value="Register">  
+        </form>
+    </div>
+  
+<!--clicking the image would slide it up.-->
+    <div id ="banner"><img src="banner1.jpg" alt="Dont share Password Banner" height="100" width="150"
+        <figcaption>Click image to minimize it </figcaption>
+    </div>
+    <!--theme change button-->
+    <input type="button" id="themebutton" value="Change Theme ">   
+    
+</body>
+</html>

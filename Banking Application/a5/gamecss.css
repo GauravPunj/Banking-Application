@@ -1,0 +1,89 @@
+body {
+    width: 10in;
+    height: 5.8in;
+    border-style: solid;
+    border-width: 5px;
+    background-image: url("tile.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+    }
+    input[type=text] { 
+        background-color: rgb(230, 186, 173); 
+        height:50px; 
+        font-size:44px; 
+        border-radius:10px; 
+        margin-top: 20px;
+                    }
+    input[type=password] { 
+        background-color: rgb(173, 200, 230); 
+        height:50px; 
+        font-size:44px; 
+        border-radius:10px; 
+        margin-top: 20px;
+                    }
+
+    input[type=submit]{
+        background-color: rgb(236, 142, 78);
+        height:50px; 
+        width: 2in;
+        font-size:35px; 
+        border-radius:10px; 
+        margin-top: 0.1in;
+        margin-left: 0.5in;
+        float: left;
+    }
+
+    
+    
+    input[type=button]{
+        background-color: rgb(238, 255, 0);
+        height:40px; 
+        width: 2in;
+        font-size:25px; 
+        border-radius:10px; 
+        margin-top: 0.1in;;
+        margin-left: 0.5in;
+        position: relative;
+    }
+    
+    p{
+        display: inline-block;
+    }
+
+    #game{
+        position: absolute;
+        float: top;
+    }
+    #game.h1{
+        position:relative;
+    }
+    #main{
+		display: inline-block;
+		width: 7in;
+		height: 5in;
+		margin-left:0.1in;
+		border-width: 4px;
+		border-style: solid;
+		border-color:red blue green blue;
+        padding-left: 0.1in;
+    }
+    #banner{
+		border-style: solid;
+		border-color: red;
+		height: 5in;
+		width: 2.3in;
+		margin-left:0.15in;
+		float: right;
+		margin-right:0.15in;
+        }
+        
+    #banner img{
+        height:85%;
+        width:90%;
+        padding-left: 0.06in;
+        padding-right: 0.08in;
+        padding-top:0.08in;
+         }
